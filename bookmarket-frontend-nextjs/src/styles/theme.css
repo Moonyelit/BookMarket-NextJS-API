@@ -1,0 +1,23 @@
+@layer base {
+    :root {
+      --color-brown: #704341;
+      --color-yellow: #EFE3C8;
+      --color-black: #121213;
+      --color-black-gray: #414141;
+      --color-white: #EAEAEA;
+      --color-violet: #1C161E;
+      --color-yellow-transparent: rgba(239, 227, 200, 0.7);
+    }
+  
+    .dark {
+      --color-background: var(--color-violet);
+      --color-foreground: var(--color-yellow);
+    }
+  
+    /* Light mode */
+    :root {
+      --color-background: var(--color-white);
+      --color-foreground: var(--color-black);
+    }
+  }
+  

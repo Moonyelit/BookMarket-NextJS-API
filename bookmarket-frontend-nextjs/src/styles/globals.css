@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+
+@layer base {
+
+  body {
+    @apply bg-[color:var(--color-background)] text-[color:var(--color-foreground)];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manrope);
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 3rem; line-height: 3.25rem; }
+  }
+
+  @media (min-width: 1024px) {
+    h1 { font-size: 3.75rem; line-height: 4rem; }
+  }
+
+  h2 { font-size: 1.875rem; line-height: 2.25rem; }
+  @media (min-width: 768px) {
+    h2 { font-size: 2.25rem; line-height: 2.5rem; }
+  }
+
+  h3 { font-size: 1.5rem; line-height: 2rem; }
+  @media (min-width: 768px) {
+    h3 { font-size: 1.875rem; line-height: 2.25rem; }
+  }
+
+  p, span, button, input, textarea {
+    font-family: var(--font-inter);
+  }
+}
