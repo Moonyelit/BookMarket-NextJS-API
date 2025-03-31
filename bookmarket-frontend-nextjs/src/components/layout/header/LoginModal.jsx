@@ -19,7 +19,7 @@ export default function LoginModal() {
         onClick={() => setOpen(true)}
         className="inline-flex items-center justify-center cursor-pointer"
       >
-        <i className="bx bx-user-circle text-yellow text-2xl"></i>
+        <i className="bx bx-user-circle text-[var(--color-yellow)] text-2xl"></i>
       </span>
 
       {/* La modale */}

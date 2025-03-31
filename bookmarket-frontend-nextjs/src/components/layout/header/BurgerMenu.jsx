@@ -25,7 +25,7 @@ export default function BurgerMenu() {
         <i
           className={`bx ${
             open ? "bx-x" : "bx-menu"
-          } text-yellow text-2xl transition-all`}
+          } text-[var(--color-yellow)] text-2xl transition-all`}
         />
       </Button>
 
@@ -33,7 +33,7 @@ export default function BurgerMenu() {
       {open && (
         <div
           onClick={toggleMenu}
-          className="fixed inset-0 bg-black/50 z-40"
+          className="fixed inset-0 bg-black/70 z-40"
           ></div>
       )}
 
