@@ -1,3 +1,5 @@
+/* toujours les imports avant tout */
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap');
 @import "tailwindcss";
 @import "./theme.css";
 @import "boxicons/css/boxicons.min.css"; 
@@ -6,7 +8,14 @@
 @layer base {
 
   body {
-    @apply bg-[color:var(--color-background)] text-[color:var(--color-foreground)];
+    @apply bg-[color:var(--color-violet)] text-[color:var(--color-foreground)];
+  }
+
+
+  @layer utilities {
+    .drop-shadow-header {
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

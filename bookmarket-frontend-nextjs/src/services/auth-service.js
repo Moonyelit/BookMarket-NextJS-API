@@ -1,15 +1,21 @@
 import axios from "axios";
 
 // Il est préférable de ne pas hardcoder l'URL de l'API ici. Utilisez une variable d'environnement ou un fichier de configuration.
-const API_URL = "https://localhost:8000/api";
+const API_URL = process.env.NEXT_PUBLIC_API_URL; 
+
+
+console.log("API_URL (env) = ", process.env.NEXT_PUBLIC_API_URL);
+
 
 // Configuration Axios
 const api = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-Type": "application/ld+json",
+    "Accept": "application/ld+json", // <= ajoute ce header
   },
 });
+
 
 // Intercepteur pour ajouter le token JWT à chaque requête
 api.interceptors.request.use(
@@ -36,8 +42,9 @@ export const AuthService = {
       const response = await api.post("/register", userData);
       return response.data;
     } catch (error) {
+      console.log("Erreur complète :", error);
       throw error.response?.data || { message: "Erreur d'inscription" };
-    }
+          }
   },
 
   /**
